@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Combustível e Quilometragem</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Controle de Combustível e Quilometragem</h1>
+    <nav class="tabs">
+      <button data-tab="veiculos" class="active">Veículos</button>
+      <button data-tab="abastecimento">Abastecimento</button>
+      <button data-tab="viagem">Viagem</button>
+      <button data-tab="historico">Histórico</button>
+      <button data-tab="dashboard">Dashboard</button>
+    </nav>
+  </header>
+  <main>
+    <!-- Cadastro de Veículo -->
+    <section id="veiculos" class="tab-content">
+      <h2>Cadastro de Veículo</h2>
+      <form id="form-veiculo">
+        <label>Placa:<input type="text" name="placa" required /></label>
+        <label>Modelo:<input type="text" name="modelo" required /></label>
+        <label>Ano:<input type="number" name="ano" min="1900" max="2100" required /></label>
+        <label>Capacidade do Tanque (L):<input type="number" name="capacidadeTanque" required /></label>
+        <button type="submit">Salvar Veículo</button>
+      </form>
+      <ul id="lista-veiculos"></ul>
+    </section>
+
+    <!-- Registro de Abastecimento -->
+    <section id="abastecimento" class="tab-content hidden">
+      <h2>Registrar Abastecimento</h2>
+      <form id="form-abastecimento">
+        <label>Veículo:<select name="placa" required></select></label>
+        <label>Km (hodômetro):<input type="number" name="km" required /></label>
+        <label>Litros:<input type="number" step="0.01" name="litros" required /></label>
+        <label>Valor/Litro:<input type="number" step="0.01" name="valorLitro" required /></label>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <!-- Registro de Viagem -->
+    <section id="viagem" class="tab-content hidden">
+      <h2>Registrar Viagem</h2>
+      <form id="form-viagem">
+        <label>Veículo:<select name="placa" required></select></label>
+        <label>Km Início:<input type="number" name="kmInicial" required /></label>
+        <label>Km Final:<input type="number" name="kmFinal" required /></label>
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+
+    <!-- Histórico de Registros -->
+    <section id="historico" class="tab-content hidden">
+      <h2>Histórico</h2>
+      <ul id="lista-registros"></ul>
+      <button id="btn-share">Enviar dados por WhatsApp</button>
+    </section>
+
+    <!-- Dashboard de Consumo -->
+    <section id="dashboard" class="tab-content hidden">
+      <h2>Dashboard</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Total Km</h3><p id="total-km">0</p>
+        </div>
+        <div class="card">
+          <h3>Total Litros</h3><p id="total-litros">0</p>
+        </div>
+        <div class="card">
+          <h3>Média (km/L)</h3><p id="media-consumo">0</p>
+        </div>
+        <div class="card">
+          <h3>Custo por Km (R$)</h3><p id="custo-km">0</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

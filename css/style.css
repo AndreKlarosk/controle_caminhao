@@ -1,15 +1,22 @@
 /* Logo menor */
 .app-logo {
-    height: 200px;       /* ajuste conforme preferir */
+    height: 200px;
     object-fit: contain;
-    margin: 0.5rem auto; /* centraliza abaixo do header */
     display: block;
+    margin: 0.5rem auto;
   }
   
-  /* Botão de instalar centralizado */
+  /* Botão de instalação centralizado */
   #btn-install {
-    display: table;
+    display: block;
     margin: 1rem auto;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
   }
   
   :root {
@@ -129,4 +136,3 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
-  

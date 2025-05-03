@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Controle de Combustível e Quilometragem</title>
+  <title>FuelApp</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
 </head>
 <body>
   <header>
-    <h1>Controle de Combustível e Quilometragem</h1>
+    <!-- Logo principal -->
+    <img src="assets/logo.png" alt="Ribeiro Logo" class="app-logo" />
     <nav class="tabs">
       <button data-tab="veiculos" class="active">Veículos</button>
       <button data-tab="abastecimento">Abastecimento</button>
@@ -18,6 +21,7 @@
     </nav>
   </header>
   <main>
+
     <!-- Cadastro de Veículo -->
     <section id="veiculos" class="tab-content">
       <h2>Cadastro de Veículo</h2>
@@ -59,6 +63,7 @@
       <h2>Histórico</h2>
       <ul id="lista-registros"></ul>
       <button id="btn-share">Enviar dados por WhatsApp</button>
+      <button id="btn-export-pdf">Exportar PDF</button>
     </section>
 
     <!-- Dashboard de Consumo -->
@@ -79,8 +84,15 @@
         </div>
       </div>
     </section>
+
   </main>
+  <button id="btn-install" class="hidden">Instalar App</button>
+
+  <!-- jsPDF e plugin autoTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
 
   <script type="module" src="js/app.js"></script>
+  <script src="sw-register.js"></script>
 </body>
 </html>

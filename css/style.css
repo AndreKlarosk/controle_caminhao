@@ -8,7 +8,7 @@
   
   /* Botão de instalar centralizado */
   #btn-install {
-    display: block;
+    display: table;
     margin: 1rem auto;
   }
   

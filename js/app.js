@@ -1,3 +1,4 @@
+import { exportPDF } from './pdf.js';
 import { openDB } from './db.js';
 import { handleVeiculo, renderVeiculos } from './veiculo.js';
 import { handleAbastecimento } from './abastecimento.js';
@@ -47,4 +48,5 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   // Compartilhar
   document.getElementById('btn-share').addEventListener('click', shareData);
+  document.getElementById('btn-export-pdf').addEventListener('click', exportPDF);
 });

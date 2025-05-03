@@ -125,3 +125,7 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
+#btn-install {
+  display: block;
+  margin: 1rem auto;
+}

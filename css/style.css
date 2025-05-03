@@ -2,8 +2,14 @@
 .app-logo {
     height: 200px;       /* ajuste conforme preferir */
     object-fit: contain;
-    margin: 0.1rem auto; /* centraliza abaixo do header */
+    margin: 0.5rem auto; /* centraliza abaixo do header */
     display: block;
+  }
+  
+  /* Botão de instalar centralizado */
+  #btn-install {
+    display: block;
+    margin: 1rem auto;
   }
   
   :root {
@@ -66,8 +72,6 @@
   }
   .hidden {
     display: none;
-    text-align: center;
-
   }
   form {
     display: grid;
@@ -125,7 +129,4 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
-#btn-install {
-  display: block;
-  margin: 1rem auto;
-}
+  
